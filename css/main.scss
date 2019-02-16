@@ -17,25 +17,29 @@ header{
         text-transform: uppercase;
     }
     .menu-btn{
-        width: 18px;
+        width: 28px;
         float: right;
         cursor: pointer;
     }
 }
 
 section{
+    margin-top:4em;
     padding: 4em;
+    text-align: center;
     h1{
         font-size: 4em;
         margin:1em auto;
-        width: 70%;
+        width: 90%;
+        letter-spacing: .8em;
         text-transform: uppercase;
 
         &::before{
             content: ' ';
+           margin:0 auto;
             border-top:5px solid lightgray;
             display: block;
-            width:45%;
+            // width:45%;
         }
     }
 }
@@ -48,12 +52,18 @@ nav{
     display:none;
     transform:scaleX(0);
     transform-origin: right;
+    transition: all 0.5s;
 
     .close-btn{
-        width:18px;
+        width:28px;
         float:right;
         cursor: pointer;
         color:white;
+        opacity: 0;
+    }
+    .v-shape{
+         width:60rem;
+        margin: 5rem 25rem;
         opacity: 0;
     }
     ul{
@@ -63,12 +73,16 @@ nav{
         display: grid;
         grid-template-columns: repeat(4,25%);
         width:80%;
-
+        li{
+            margin-right: 2em;
+        }
         a{
             color:white;
             font-weight: bold;
             font-size:1.4em;
+            letter-spacing: .1em;
             text-transform: uppercase;
+           
         }
         //this is the span element
         span{
@@ -76,6 +90,7 @@ nav{
             display: block;
             font-size:.75em;
             margin-top:20px;
+            letter-spacing: .5em;
         }
         li{
             opacity: 0;
@@ -88,6 +103,9 @@ nav{
 
     .close-btn{
         animation: show-x 1s 1s forwards;
+    }
+    .v-shape{
+        animation: show-x 2s 2s forwards;
     }
     li:nth-of-type(1){
         animation: menu-item-anim .9s forwards 1s ease-in-out;
@@ -103,6 +121,8 @@ nav{
        }
 }
 
+
+
 @keyframes slide-menu{
     from{
         transform: scaleX(0);
@@ -111,6 +131,7 @@ nav{
         transform: scaleX(1);
     }
 }
+
 @keyframes show-x {
     from {
          opacity: 0;
@@ -120,6 +141,7 @@ nav{
          opacity: 1;
     }
 }
+
 @keyframes menu-item-anim{
     from{
         transform: translateY(50%);

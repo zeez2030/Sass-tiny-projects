@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="4119.379 1535.379 1000.242 501.462">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+      }
+
+      .cls-1 {
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Vshape" transform="translate(3508 1143)">
+    <path id="Path_1" data-name="Path 1" class="cls-1" d="M0,0,494,494" transform="translate(613.5 394.5)"/>
+    <path id="Path_2" data-name="Path 2" class="cls-1" d="M0,494,494,0" transform="translate(1115.5 394.5)"/>
+    <line id="Line_5" data-name="Line 5" class="cls-2" x2="8" y2="3" transform="translate(1107.5 888.5)"/>
+  </g>
+</svg>

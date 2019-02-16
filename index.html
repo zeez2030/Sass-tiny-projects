@@ -28,6 +28,7 @@
                     <span>Hurry,get back to the choppa!</span>
                 </li>
             </ul>
+            <img src="svgs/Vshape.svg" class="v-shape" id="close-menu" alt="">
         </nav>
         <header>
             <a href="#" clas="logo"> mysite </a>
@@ -45,10 +46,13 @@
             var overlay=document.getElementById("overlay"); var closemenu = document.getElementById("close-menu");
             
             document.getElementById('open-menu').addEventListener('click',function(){
+               
                 overlay.classList.add('show-menu');
             });
             document.getElementById('close-menu').addEventListener('click', function () {
+              
                 overlay.classList.remove('show-menu');
+                
             });
         
         </script>
