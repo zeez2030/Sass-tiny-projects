@@ -1,47 +1,213 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+// Variables
+
+$primary:#ddd;
+$dark:#333;
+$light:#fff;
+$shadow:0 1px 5px rgba(104,104,104,0.8);
+
+//styling
+
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color:$dark;
+}
 body{
-    
-    background: #111;
-    font-family: 'montserrat';
-    margin:0;
+    background: #ccc;
+    margin:30px 50px;
+    line-height: 1.4;
+    img{
+        max-width: 100%;
+    }
+}
+.btn{
+    background: $dark;
+    color:$light;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border:0;
+    transition: all 0.3s;
+    &:hover{
+        background: rgb(236, 218, 197);
+        color:$dark;
+    }
+}
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+
+    // navigation
+    .main-nav ul{
+        display: grid;
+        grid-gap: 20px;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(4,1fr);
+
+        a{
+            background: $primary;
+            display: block;
+            text-decoration: none;
+            padding:0.8rem;
+            text-align: center;
+            color:$dark;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            box-shadow:$shadow;
+            transition: all 0.3s;
+            
+            &:hover{
+                background: $dark;
+                color:$light;
+            }
+        }
+    }
+}
+
+// top container
+
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+    //showcase 
+   
+    .showcase{
+        grid-area:showcase;
+        min-height: 400px;
+        background: url('../img/showcase.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: top;
+        box-shadow: $shadow;
+        
+        h1{
+            font-size: 4rem;
+            margin-bottom: 0;
+            color:$light;
+        }
+        p{
+            font-size: 1.3rem;
+            margin-top:0;
+            color:$light;
+        }
+    }
+    .top-box{
+        background: $primary;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        box-shadow: $shadow;
+        padding:1.5rem;
+        .price{
+            font-size: 2.5rem;
+        }
+        .top-box-a{
+            grid-area: top-box-a;
+        }
+        .top-box-b {
+            grid-area: top-box-b;
+        }
+    }
+}
+
+//boxes
+
+.boxes{
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    .box{
+        background: $primary;
+        text-align: center;
+        padding:1.5rem 2rem;
+        box-shadow: $shadow;
+    }
+}
+
+// info
+
+.info{
+    background: $primary;
+    box-shadow: $shadow;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2,1fr);
+    padding: 3rem;
+}
+
+// portfolio
+
+.portofolio {
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    img{
+        width:100%;
+        box-shadow: $shadow;
+    }
+}
+
+// footer
+
+footer{
+    margin-top:2rem;
+    background:$dark;
+    color:$light;
+    text-align: center;
+    padding: 1rem;
+}
+
+// media queries
+
+@media(max-width: 700px){
+     .wrapper .main-nav ul{
+         grid-template-columns: 1fr;
+     }
+    .top-container{
+        grid-template-areas: 
+        'showcase showcase'
+        'top-box-a top-box-b';
+       .showcase h1{
+            font-size: 2.5rem;
+        }
+    }
+     .info{
+        grid-template-columns: 1fr;
+        .btn{
+            display: block;
+            text-align: center;
+            margin:auto;
+        }
+    }
    
 }
+@media(max-width: 500px) {
+    .top-container {
+        grid-template-areas:
+            'showcase '
+            'top-box-a'
+            'top-box-b';
 
-.wrapper{
+        .showcase h1 {
+            font-size: 2.5rem;
+        }
+    }
 
-    padding:0;
-    margin:0;
-    display: grid;
-     grid-template-columns: repeat(4,1fr);
-     grid-auto-rows: minmax(200px,auto);
-     grid-gap: 1em;
-     width:80%;
-     margin:10em auto 0 auto;
-     padding: 1em;
-     color:white;
-     list-style-type: none;
-      background-color:black;
-      filter: brightness(100%);
-      clip-path: polygon(0% 15%, 0 0, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 57%, 100% 100%, 56% 100%, 56% 59%, 0 100%, 0% 85%);
-    
+    .info {
+        grid-template-columns: 1fr;
 
-     a{
-         text-decoration: none;
-         color:white;
-         font-weight: bold;
-         font-size: 2em;
-         letter-spacing: .2em;
-         text-transform: uppercase;
-     }
-     p{
-         margin-top:0;
-         line-height: 1em;
-         letter-spacing: .2em;
-         width:50%;
-         font-weight: 100;
-         color:#aaa;
-     }
-    
+        .btn {
+            display: block;
+            text-align: center;
+            margin: auto;
+        }
+    }
 
 }
-
