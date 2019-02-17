@@ -1,5 +1,6 @@
 var boxesContainer = document.querySelector('.boxes');
 var boxes = document.getElementsByClassName('box');
+
 var overlay = document.getElementById('overlay');
 
 for(let i = 1 ; i<5 ; i++){
