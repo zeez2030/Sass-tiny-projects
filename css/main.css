@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -68,7 +70,7 @@ body {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   padding: 2em 0em;
-  margin: 3em auto;
+  margin: 0em auto;
   width: 50%;
   border-radius: 10px;
 }
@@ -94,6 +96,59 @@ body {
 }
 
 .boxes .box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.stats {
+  width: 50%;
+  margin: 1em auto 0 auto;
+  text-align: center;
+  padding: 1em;
+}
+
+.stats h3 {
+  font-size: 2em;
+  text-transform: capitalize;
+  letter-spacing: .2em;
+}
+
+.stats p {
+  text-align: left;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  font-weight: bold;
+  color: #333;
+}
+
+.stats p i {
+  margin: 0;
+  letter-spacing: .1em;
+  font-size: 1.6em;
+}
+
+.stats p span {
+  margin-left: 1em;
+  font-weight: lighter;
+}
+
+.stats p #moves {
+  font-size: 2em;
+}
+
+.stats p #refresh {
+  margin-left: 10em;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.stats p #refresh i {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.stats p #refresh i:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -126,6 +181,33 @@ body {
 .visible {
   -webkit-animation: visible 0.2s  forwards;
           animation: visible 0.2s  forwards;
+}
+
+.die {
+  -webkit-animation: die 0.3s forwards;
+          animation: die 0.3s forwards;
+}
+
+@-webkit-keyframes die {
+  from {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes die {
+  from {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  to {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
 }
 
 @-webkit-keyframes hide {

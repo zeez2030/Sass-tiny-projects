@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body{
     margin:0;
     padding:0;
-   
+   font-family: 'Montserrat',
+   sans-serif;
 }
 
 .wrapper {
@@ -63,7 +65,7 @@ body{
     grid-row-gap: 2em;
     grid-template-columns: repeat(4,1fr);
     padding: 2em 0em ;
-    margin: 3em auto;
+    margin: 0em auto ;
     width:50%;
     border-radius: 10px;
    
@@ -88,6 +90,54 @@ body{
         }
     }
 }
+
+.stats {
+    width:50%;
+    // background: red;
+    margin: 1em auto 0 auto;
+    text-align: center;
+    padding: 1em;
+    h3{
+        font-size: 2em;
+        text-transform: capitalize;
+        letter-spacing: .2em;
+    }
+    p{
+        // background: #ddd;
+        text-align: left;
+        width:50%;
+        margin:0 auto;
+        padding:1em;
+        font-weight: bold;
+        color:#333;
+        i{
+            margin:0;
+            letter-spacing:.1em;
+            font-size: 1.6em;
+        }
+        span{
+            margin-left:1em;
+            font-weight: lighter;
+            
+        }
+        #moves{
+            font-size: 2em;
+        }
+        #refresh{
+            margin-left:10em;
+            font-size: 1.2em;
+           cursor: pointer;
+           i{
+               transition: all 0.6s;
+           &:hover{
+               transform: scale(1.1);
+           }
+        }
+        }
+    }
+}
+
+
 .click-card{
     animation: change-background .3s forwards;
     i{
@@ -109,6 +159,20 @@ body{
 .visible{
     animation:visible 0.2s  forwards;
 }
+
+.die{
+    animation: die 0.3s forwards;
+}
+@keyframes die {
+    from {
+        transform: scale(2);
+    }
+
+    to {
+        transform: scale(0.9);
+    }
+}
+
 
 @keyframes hide {
     from {
