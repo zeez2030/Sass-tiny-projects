@@ -1,6 +1,15 @@
+var boxesContainer = document.querySelector('.boxes');
 var boxes = document.getElementsByClassName('box');
-var boxesContainer=document.querySelector('.boxes');
 var overlay = document.getElementById('overlay');
+
+for(let i = 1 ; i<5 ; i++){
+var random = Math.floor(Math.random() * 12);
+ var box=boxes[random].innerHTML;
+    boxes[random].innerHTML=boxes[random+i].innerHTML;
+    boxes[random + i].innerHTML=box;
+}
+
+
 var i=0;
 var shapes=[];
 var boxess=[];
